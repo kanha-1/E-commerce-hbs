@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST" action="/submit" >
+        <input type="text" name="name" placeholder="Enter you name">
+        <input type="email" name="email" placeholder="Enter you Email">
+        <input type="password" name="password" placeholder="Enter you password">
+        <input type="submit" value="Signup!">
+    </form>
+</body>
+</html>
+
+
+query.exec(function(err, data) {
+    if (err) return res.redirect(401, "/login"); //console.log(docs);
+
+    data.forEach(function(user) {
+      if (user.pass === lpass) {
+        id = user._id;
+        req.session.userId = id;
+        return res.redirect("/");
+      } else {
+        return res.redirect("/login");
+      }
+    });

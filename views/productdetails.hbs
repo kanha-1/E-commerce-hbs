@@ -1,0 +1,41 @@
+{{>header}}
+
+ <div class="row pl-5 pr-5 ml-5 pt-3  text-primary ">
+     {{#each pdata}}
+        <div class=" card-deck ">
+            <div class="card " style="width: 18rem;">
+                <img class="card-img-top" src="{{this.image}}" alt="Products" style="height: 150px","width:250px" > 
+            </div>
+            <div class="card-body " >
+                    <p class="card-text">Brand: {{this.name}}</p>
+                    <p class="card-text">Price: {{this.price}}</p>
+                    <p class="card-text">Category: {{this.catagory}}</p>
+                    <form action="/productdetails?id={{this.id}}&cart=1" method="POST">
+                    <input type="submit" class="btn btn-primary btn-sm "value="Add to cart">
+                    </form>   
+            </div>
+        </div> 
+        {{/each}} 
+</div>
+
+
+<h3>You may also like</h3>
+<div class="row pl-5 ml-5 pt-3 mt-3 text-primary ">
+    {{#each rdata}}
+        <div class="col-3 card-deck py-3 ">
+            <div class="card bg-dark" style="width: 18rem;">
+                <img class="card-img-top" src="{{this.image}}" alt="Products" style="height: 100px;" >
+                <div class="card-body " >
+                    <p class="card-text">Brand: {{this.name}}</p>
+                    <p class="card-text">Price: {{this.price}}</p>
+                    <p class="card-text">Category: {{this.catagory}}</p>
+                </div>
+               <div class="text-center">
+                    <form action="/productdetails?id={{this.id}}" method="POST">
+                    <input type="submit" class="btn btn-primary btn-lg px-5" value="Buy">
+                </form>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>

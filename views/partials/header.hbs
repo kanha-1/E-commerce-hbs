@@ -1,0 +1,58 @@
+{{#if hide}}
+{{>style}}
+{{else}}
+{{>logreg}}
+{{/if}}
+<style>
+.crt{
+    margin-left: 550px;
+}
+.bg{
+    background-color:#5544527a;
+}
+ul li a{
+    color: gainsboro;
+    font-size: medium;
+}
+ul li a:hover{
+    color: rgb(64, 129, 26);
+}
+</style>
+
+<div class="navbar navbar-expand-sm bg">
+   <a class="navbar-brand" href="/">
+    <a class="nav-link " id="reg" href="/register">Register</a>
+    <a class="nav-link " id="reg" href="/login">login</a>
+    
+</div>
+
+<nav class="navbar navbar-expand-lg bg pl-3">
+    <a class="navbar-brand" href="/">
+    <img src="images/logo.jpeg" alt="" height="50px" width="80px"></a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item  pl-5">
+                <a class="nav-link" href="/womens">Women </a>
+            </li>
+            <li class="nav-item pl-5">
+                <a class="nav-link" href="/mens">Mens</a>
+            </li>
+            <li class="nav-item pl-5">
+                <a class="nav-link" href="/kids">Kids</a>
+            </li>
+            <li class="nav-item pl-5">
+            <a href="./addproducts"><button type="submit" class="btn btn-success" value="add">Add</button></a>
+            </li>
+            <li class="nav-item pl-5 crt">
+              <a href="../cart"><i class="fas fa-shopping-cart nav-link" ></i>cart</a>
+            </li>
+            <li class="nav-item pl-5">
+             <form  method='POST' action='/logout?nikloo=DELETE'> 
+            {{!-- <input type="submit" value="logout"/> --}}
+            <button type="submit" id="logout" class="btn btn-danger">logout</button>
+            </form>
+            </li>
+        </ul>
+    </div>
+    
+</nav>

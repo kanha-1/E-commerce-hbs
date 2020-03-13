@@ -1,0 +1,31 @@
+{{>header}}
+<style>
+    body{
+        background-color: darkorange;
+    }
+</style>
+<a href="./Thankyou"><button type="submit" class="btn btn-success" value="add">Check out</button></a>
+<table class="table">
+    <thead>
+        
+        <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Price</th>
+            <th scope="col">For</th>
+            <th scope="col">Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each data}}
+        <tr>
+            <th scope="col"><img src="{{this.image}}" class="rounded" height="50px" width="50px" alt="products"></th>
+            <th scope="col">{{this.name}}</th>
+            <th scope="col">{{this.price}}</th>
+            <th scope="col">{{this.catagory}}</th>
+            <th scope="col">{{this.quantity}}</th>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+

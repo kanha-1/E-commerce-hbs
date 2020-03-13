@@ -1,0 +1,9 @@
+body{
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.shop{
+   margin-left: 600px;
+   margin-top: 300px;
+}

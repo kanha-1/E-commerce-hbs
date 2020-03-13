@@ -1,0 +1,28 @@
+{{>header}}
+
+    <div class="row pl-5 ml-5 pt-3 mt-3 text-primary ">
+    {{#each data}}
+        <div class="col-3 card-deck py-3 ">
+            <div class="card bg-dark" style="width: 18rem;">
+                <img class="card-img-top" src="{{this.image}}" alt="Products" style="height: 200px;" >
+                <div class="card-body " >
+                    <p class="card-text">Brand: {{this.name}}</p>
+                    <p class="card-text">Price: {{this.price}}</p>
+                    <p class="card-text">Category: {{this.catagory}}</p>
+                </div>
+               <div class="text-center">
+                    <form action="/productdetails?id={{this.id}}" method="POST">
+                    <input type="submit" class="btn btn-primary btn-lg px-5" value="Buy">
+                </form>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
+<nav aria-label="...">
+  <ul class="pagination pagination-sm">
+    {{#each pageCount}}
+    <li class="page-item"><a class="page-link" href="?page={{this}}">{{this}}</a></li>
+    {{/each}}
+  </ul>
+</nav>

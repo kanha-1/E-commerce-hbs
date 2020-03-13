@@ -1,0 +1,42 @@
+{{>header}}
+<style>
+  body {
+    background-image: url('images/register.jpg');
+    background-size: auto;
+  }
+
+  .cstr {
+    width: 300px;
+    margin-left: 400px;
+    margin-top: 50px;
+    color: chartreuse;
+  }
+</style>
+
+<form class="cstr" method='POST' action='/add'>
+<h3>Add your products and became a seller</h3>
+  <div class="form-group">
+    <label for="exampleInput">Brand</label>
+    <input type="name" name="name" class="form-control" id="exampleInput" placeholder="Enter your Brand name">
+  </div>
+  <div class="form-group">
+    <label for="exampleInput">Price</label>
+    <input type="number" name="price" class="form-control" id="exampleInput" placeholder="Enter your product Price">
+  </div>
+  <div class="form-group">
+    <label for="exampleInput">Catagory</label>
+    <input type="text" name="catagory" class="form-control" id="exampleInput"
+      placeholder="Enter your catagory Male,Female,Kids">
+  </div>
+  {{!-- <div class="form-group">
+    <label for="exampleFormControlSelect1">Select Catagory</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>Male <input type="text" name="catagory"></option>
+      <option>Female <input type="text" name="catagory"></option>
+      <option>Kids <input type="text" name="catagory"></option>
+    </select>
+  </div> --}}
+
+  {{!-- <input type="submit" value="add" /> --}}
+  <button type="submit" class="btn btn-primary" value="add">Submit</button>
+</form>`
