@@ -4,15 +4,15 @@
   "description": "Montly test",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node server.js"
   },
   "author": "kanha",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
-    "hbs": "^4.1.0",
+    "hbs": "^4.1.1",
     "jsdom": "^16.2.1",
     "method-override": "^3.0.0",
     "mongoose": "^5.9.4"
